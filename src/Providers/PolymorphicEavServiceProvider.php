@@ -12,6 +12,10 @@ class PolymorphicEavServiceProvider extends ServiceProvider
     public function boot()
     {
          $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+
+         $this->publishes([
+            __DIR__.'/../config/config.php' => config_path('laravel-polymorphic-eav.php'),
+        ]);
     }
 
     /**
@@ -19,6 +23,6 @@ class PolymorphicEavServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../config/config.php', 'laravel-polymorphic-eav');
+        // $this->mergeConfigFrom(__DIR__ . '/../../config/config.php', 'laravel-polymorphic-eav');
     }
 }
