@@ -1,5 +1,5 @@
 {
-    "name": "davidwesdijk/laravel-polymorphic-eav",
+    "name": "coldsnakedigital/laravel-polymorphic-eav",
     "description": "Integrate the entity-attribute-value model with polymorphic Eloquent-relations in your Laravel application.",
     "keywords": [
         "laravel-polymorphic-eav",
@@ -13,6 +13,11 @@
         {
             "name": "David Wesdijk",
             "email": "david@favor.media",
+            "role": "Developer"
+        },
+        {
+            "name": "Stacey Rattlesnake",
+            "email": "stacey@coldsnakedigital.com",
             "role": "Developer"
         }
     ],
