@@ -31,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "DavidWesdijk\\LaravelPolymorphicEav\\": "src"
+            "ColdsnakeDigital\\LaravelPolymorphicEav\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DavidWesdijk\\LaravelPolymorphicEav\\Tests\\": "tests"
+            "ColdsnakeDigital\\LaravelPolymorphicEav\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,7 +50,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DavidWesdijk\\LaravelPolymorphicEav\\Providers\\PolymorphicEavServiceProvider"
+                "ColdsnakeDigital\\LaravelPolymorphicEav\\Providers\\PolymorphicEavServiceProvider"
             ]
         }
     }

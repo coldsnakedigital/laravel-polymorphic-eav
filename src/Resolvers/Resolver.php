@@ -1,10 +1,10 @@
 <?php
 
-namespace DavidWesdijk\LaravelPolymorphicEav\Resolvers;
+namespace ColdsnakeDigital\LaravelPolymorphicEav\Resolvers;
 
-use DavidWesdijk\LaravelPolymorphicEav\EntityAttribute;
-use DavidWesdijk\LaravelPolymorphicEav\EntityAttributeValue;
-use DavidWesdijk\LaravelPolymorphicEav\Traits\HasEntityAttributeValues;
+use ColdsnakeDigital\LaravelPolymorphicEav\EntityAttribute;
+use ColdsnakeDigital\LaravelPolymorphicEav\EntityAttributeValue;
+use ColdsnakeDigital\LaravelPolymorphicEav\Traits\HasEntityAttributeValues;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Database\Eloquent\Collection;

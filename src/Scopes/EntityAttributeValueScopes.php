@@ -1,13 +1,13 @@
 <?php
 
-namespace DavidWesdijk\LaravelPolymorphicEav\Scopes;
+namespace ColdsnakeDigital\LaravelPolymorphicEav\Scopes;
 
-use DavidWesdijk\LaravelPolymorphicEav\EntityAttribute;
+use ColdsnakeDigital\LaravelPolymorphicEav\EntityAttribute;
 use Illuminate\Database\Eloquent\Builder;
 
 /**
  * Trait EntityAttributeValueScopes
- * @package DavidWesdijk\LaravelPolymorphicEav\Scopes
+ * @package ColdsnakeDigital\LaravelPolymorphicEav\Scopes
  *
  * @method static hasAttribute(EntityAttribute|int $attribute) Get instances with a given attribute
  */

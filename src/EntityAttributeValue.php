@@ -1,6 +1,6 @@
 <?php
 
-namespace DavidWesdijk\LaravelPolymorphicEav;
+namespace ColdsnakeDigital\LaravelPolymorphicEav;
 
 use Illuminate\Database\Eloquent\Model;
 

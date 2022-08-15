@@ -1,8 +1,8 @@
 <?php
 
-namespace DavidWesdijk\LaravelPolymorphicEav\Tests;
+namespace ColdsnakeDigital\LaravelPolymorphicEav\Tests;
 
-use DavidWesdijk\LaravelPolymorphicEav\Providers\PolymorphicEavServiceProvider;
+use ColdsnakeDigital\LaravelPolymorphicEav\Providers\PolymorphicEavServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 class ExampleTest extends TestCase

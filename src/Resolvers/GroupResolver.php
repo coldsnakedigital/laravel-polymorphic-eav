@@ -1,8 +1,8 @@
 <?php
 
-namespace DavidWesdijk\LaravelPolymorphicEav\Resolvers;
+namespace ColdsnakeDigital\LaravelPolymorphicEav\Resolvers;
 
-use DavidWesdijk\LaravelPolymorphicEav\Traits\HasEntityAttributeValues;
+use ColdsnakeDigital\LaravelPolymorphicEav\Traits\HasEntityAttributeValues;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 

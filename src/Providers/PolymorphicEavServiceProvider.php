@@ -1,6 +1,6 @@
 <?php
 
-namespace DavidWesdijk\LaravelPolymorphicEav\Providers;
+namespace ColdsnakeDigital\LaravelPolymorphicEav\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

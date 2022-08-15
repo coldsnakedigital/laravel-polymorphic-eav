@@ -21,7 +21,7 @@ In order to implement the Entity-Attribute-Value-model to your Eloquent models, 
 `HasEntityAttributeValues` Trait. That's all action required to use the full features this package brings.
 
 ``` php
-use DavidWesdijk\LaravelPolymorphicEav\Traits\HasEntityAttributeValues;
+use ColdsnakeDigital\LaravelPolymorphicEav\Traits\HasEntityAttributeValues;
 
 class Product extends Model
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace DavidWesdijk\LaravelPolymorphicEav\Traits;
+namespace ColdsnakeDigital\LaravelPolymorphicEav\Traits;
 
-use DavidWesdijk\LaravelPolymorphicEav\EntityAttributeValue;
-use DavidWesdijk\LaravelPolymorphicEav\Resolvers\GroupResolver;
-use DavidWesdijk\LaravelPolymorphicEav\Scopes\EntityAttributeValueScopes;
+use ColdsnakeDigital\LaravelPolymorphicEav\EntityAttributeValue;
+use ColdsnakeDigital\LaravelPolymorphicEav\Resolvers\GroupResolver;
+use ColdsnakeDigital\LaravelPolymorphicEav\Scopes\EntityAttributeValueScopes;
 
 /**
  * Trait HasEntityAttributeValues
- * @package DavidWesdijk\LaravelPolymorphicEav\Traits
+ * @package ColdsnakeDigital\LaravelPolymorphicEav\Traits
  */
 trait HasEntityAttributeValues
 {
