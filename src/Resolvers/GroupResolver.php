@@ -30,10 +30,11 @@ class GroupResolver
      */
     public function getProperties(?string $group = null): Collection
     {
+        $instance = (new class { use HasEntityAttributeValues; });
         return $this->model
-            ->{HasEntityAttributeValues::$relationName}
-            ->when($group, function (Collection $properties) use ($group) {
-                return $properties->where(HasEntityAttributeValues::$attributeGroup, $group);
+            ->{$instance::$relationName}
+            ->when($group, function (Collection $properties) use ($group, $instance) {
+                return $properties->where($instance::$attributeGroup, $group);
             });
     }
 
