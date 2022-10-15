@@ -47,7 +47,7 @@ trait EntityAttributeValueScopes
         $entityId = (isset($entity->id)) ? $entity->id : $entity;
 
         return $query->whereHas(static::$relationName, function (Builder $query) use ($entityId, $attributeId, $value) {
-            $query->where('entity_id', $entityId)->where('entity_attribute_id', $attributeId)->where('value', 'LIKE', '%'.$value.'%');
+            $query->where('attributable_id', $entityId)->where('entity_attribute_id', $attributeId)->where('value', 'LIKE', '%'.$value.'%');
         });
     }
 }
