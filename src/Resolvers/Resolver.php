@@ -42,7 +42,8 @@ class Resolver implements Arrayable, Jsonable
      */
     public function __get(string $property): ?string
     {
-        return $this->getEntityAttributeValue($property)->{HasEntityAttributeValues::$value} ?? null;
+        $instance = (new class { use HasEntityAttributeValues; });
+        return $this->getEntityAttributeValue($property)->{$instance::$value} ?? null;
     }
 
     /**
@@ -55,7 +56,8 @@ class Resolver implements Arrayable, Jsonable
      */
     public function __set(string $property, ?string $value)
     {
-        return $this->updateOrCreateValue($property, $value)->{HasEntityAttributeValues::$value};
+        $instance = (new class { use HasEntityAttributeValues; });
+        return $this->updateOrCreateValue($property, $value)->{$instance::$value};
     }
 
     /**
@@ -115,9 +117,10 @@ class Resolver implements Arrayable, Jsonable
      */
     private function getEntityAttributeValue(string $property): ?EntityAttributeValue
     {
+        $instance = (new class { use HasEntityAttributeValues; });
         return $this
             ->getProperties()
-            ->firstWhere(HasEntityAttributeValues::$attributeName, $property);
+            ->firstWhere($instance::$attributeName, $property);
     }
 
     /**
@@ -142,22 +145,23 @@ class Resolver implements Arrayable, Jsonable
      */
     private function updateOrCreateValue(string $property, ?string $value): EntityAttributeValue
     {
+        $instance = (new class { use HasEntityAttributeValues; });
         if ($eav = $this->getEntityAttributeValue($property)) {
-            $eav->{HasEntityAttributeValues::$value} = $value;
+            $eav->{$instance::$value} = $value;
             $eav->save();
 
         } else {
             $eav = $this
                 ->resolver
                 ->model
-                ->{HasEntityAttributeValues::$relationName}()
+                ->{$instance::$relationName}()
                 ->create([
                     'entity_attribute_id' => $this->getAttribute($this->group, $property)->getKey(),
                     'value' => $value,
                 ]);
         }
 
-        $this->resolver->model->load(HasEntityAttributeValues::$relationName);
+        $this->resolver->model->load($instance::$relationName);
 
         return $eav;
     }
