@@ -54,7 +54,7 @@ trait EntityAttributeValueScopes
                 $query->where('entity_attribute_id', $attributeId);
             }
             if (!empty($value)) {
-                $query->where('value', 'LIKE', '%'.$value.'%');
+                $query->where('value', 'LIKE', '%\"'.$value.'\"%');
             }
         });
     }
